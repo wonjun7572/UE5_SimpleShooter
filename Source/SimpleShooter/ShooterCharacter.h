@@ -29,7 +29,22 @@ public:
 private:
 	void MoveForward(float AxisValue);
 	void MoveRight(float AxisValue);
-	// void LookUp(float AxisValue); 부모클래스에 존재함
-};
 
+	void SpeedUp();
+	void SpeedDown();
+
+	void Fire();
+
+	// void LookUp(float AxisValue); 부모클래스에 존재함
+
+private:
+	UPROPERTY(VisibleAnywhere, Category = "Movement")
+		float SpeedRate = 1.f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Gun")
+		TSubclassOf<class AGun> GunClass;
+
+	UPROPERTY()
+		class AGun* Gun;
+};
 
