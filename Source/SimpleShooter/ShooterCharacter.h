@@ -38,6 +38,7 @@ private:
 	void SpeedUp();
 	void SpeedDown();
 
+public:
 	void Fire();
 
 	// void LookUp(float AxisValue); 부모클래스에 존재함

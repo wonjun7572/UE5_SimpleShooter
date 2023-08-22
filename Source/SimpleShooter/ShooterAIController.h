@@ -20,6 +20,10 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
+	// 그냥 직접 AI를 만들어보기 위한 변수 였음 트리 이용할 예정
+	//UPROPERTY(EditAnywhere)
+		//float AcceptanceRadius = 200.f;
+
 	UPROPERTY(EditAnywhere)
-		float AcceptanceRadius = 200.f;
+		class UBehaviorTree* AIBehaviorTree;
 };
